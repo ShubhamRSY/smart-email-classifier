@@ -1,74 +1,119 @@
 # 📬 Smart Email Classifier (Prompt Engineering with OpenAI)
 
-This project is a hands-on, real-world demonstration of how to classify and understand text messages using **prompt engineering techniques** and **GPT models**.
+This project is a hands-on, real-world demonstration of how to classify and understand SMS messages using **OpenAI's GPT** models and **prompt engineering techniques**. It includes a full Streamlit UI for live interaction.
 
 ---
 
 ## ✅ What We've Built
 
 - **Few-Shot Prompt Classifier**  
-  A Python script that classifies SMS messages as `Spam` or `Not Spam` using GPT-3.5 with few-shot prompting.
+  Classify messages as `Spam` or `Not Spam` using few-shot examples.
 
-- **Dataset Integration with KaggleHub**  
-  SMS Spam Collection dataset is fetched directly using `kagglehub` and cleaned with `pandas`.
+- **Zero-Shot Summarization**  
+  Generate one-line summaries of messages using direct instruction.
+
+- **Chain-of-Thought Reasoning**  
+  Ask GPT to explain its logic before making a classification.
+
+- **Streamlit UI**  
+  A live web interface to run all tasks—no code required.
 
 - **Secure API Usage**  
-  OpenAI API key is safely managed via a `.env` file (excluded from GitHub via `.gitignore`).
+  OpenAI API key is stored securely in a `.env` file.
 
-- **OpenAI SDK v1.0+ Migration**  
-  Code is fully compatible with the latest OpenAI SDK using `OpenAI()` client structure.
+- **OpenAI SDK v1.0+ Compatible**  
+  Clean code using the modern `OpenAI()` client structure.
 
 ---
 
 ## 🧠 Skills Demonstrated
 
-- ✅ **Few-Shot Prompt Engineering**
-- ✅ **Zero-Shot Prompting** *(coming next)*
-- ✅ **OpenAI API integration**
-- ✅ **Dataset handling and real message evaluation**
-- ✅ **VS Code + GitHub Workflow**
+- Prompt Engineering (Few-Shot, Zero-Shot, CoT)
+- GPT-3.5 API Integration
+- Streamlit App Development
+- Secure API handling with `dotenv`
+- Dataset processing via `KaggleHub` and `pandas`
+- GitHub-based version control and collaboration
 
 ---
 
 ## 📂 Project Structure
 
 smart-email-classifier/
-├── classify_with_prompt.py # Few-shot classification script
-├── load_dataset.py # KaggleHub dataset fetch & display
-├── .env # API key (not included in repo)
+├── app.py # Streamlit UI
+├── classify_with_prompt.py # Few-shot prompt classification
+├── classify_with_cot.py # Chain-of-Thought classifier
+├── summarize_message.py # Zero-shot summarization
+├── load_dataset.py # Dataset fetch and preview
+├── .env # API Key (not included in repo)
 ├── .gitignore
 └── README.md
+
 
 
 ---
 
 ## 🚀 How to Run
 
-1. Clone the repo  
-2. Create your `.env` file with your OpenAI API key:
-OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
+### 🔧 Setup
 
-3. Install dependencies:
-```bash
-pip install -r requirements.txt
-Run the classifier:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ShubhamRSY/smart-email-classifier.git
+   cd smart-email-classifier
+
+
+```
+
+Create a .env file with your OpenAI key:
+
+ini
+Copy
+Edit
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxx
+Install dependencies
 
 bash
 Copy
 Edit
-python classify_with_prompt.py
+pip install -r requirements.txt
+```
 
+▶️ Running Tasks
+1. Few-Shot Classification
+bash
+Copy
+Edit
+python classify_with_prompt.py
+2. Zero-Shot Summarization
+bash
+Copy
+Edit
+python summarize_message.py
+3. Chain-of-Thought Reasoning
+bash
+Copy
+Edit
+python classify_with_cot.py
+4. Run Streamlit App
+bash
+Copy
+Edit
+streamlit run app.py
+📌 Next Steps
+ Zero-Shot Summarization
+
+ Chain-of-Thought Reasoning
+
+ Streamlit Deployment
+
+ Add RAG-based Answering
+
+ LLMOps + Deployment (FastAPI, Docker)
+
+ HuggingFace/Streamlit Cloud Deployment
 
 👤 Author
 Shubham Yedekar
-Built with ❤️ and a lot of learning!
+Built with ❤️ and GPT.
 
-yaml
-Copy
-Edit
-
----
-
-Would you like me to create a `requirements.txt` file for you as well?
-
-```
